@@ -2,6 +2,11 @@
 
 A simple product inventory manager. The backend is an ASP.NET Core Web API using CQRS with MediatR, Entity Framework Core for persistence, and SQLite as the database. The frontend is an Angular 18 app.
 
+## Prerequisites
+
+- [.NET 10 SDK](https://dotnet.microsoft.com/download)
+- [Node.js 18+](https://nodejs.org)
+
 ## Running Locally
 
 You need two terminals — one for the API, one for the frontend.
