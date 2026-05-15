@@ -155,3 +155,4 @@ C:\Users\Alley\inventory-app\src\InventoryApi\bin\Debug\net10.0\Microsoft.Identi
 C:\Users\Alley\inventory-app\src\InventoryApi\bin\Debug\net10.0\Microsoft.IdentityModel.JsonWebTokens.dll
 C:\Users\Alley\inventory-app\src\InventoryApi\bin\Debug\net10.0\Microsoft.IdentityModel.Logging.dll
 C:\Users\Alley\inventory-app\src\InventoryApi\bin\Debug\net10.0\Microsoft.IdentityModel.Tokens.dll
+C:\Users\Alley\inventory-app\src\InventoryApi\obj\Debug\net10.0\InventoryApi.sourcelink.json
