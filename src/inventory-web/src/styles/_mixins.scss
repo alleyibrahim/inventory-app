@@ -1,0 +1,20 @@
+@use 'variables' as *;
+
+@mixin flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin card {
+  background: $surface;
+  border-radius: $radius-lg;
+  box-shadow: $shadow;
+  border: 1px solid $border;
+}
+
+@mixin focus-ring {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba($primary, 0.15);
+  border-color: $primary;
+}

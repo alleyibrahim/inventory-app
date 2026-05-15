@@ -1,0 +1,51 @@
+<form [formGroup]="form" (ngSubmit)="submit()" class="product-form">
+  @if (error) {
+    <div class="form-error">{{ error }}</div>
+  }
+
+  <div class="form-group">
+    <label for="name">Name</label>
+    <input id="name" formControlName="name" [class.input--invalid]="form.controls.name.invalid && form.controls.name.touched" />
+    @if (form.controls.name.touched && form.controls.name.hasError('required')) {
+      <span class="field-error">Name is required.</span>
+    }
+  </div>
+
+  <div class="form-group">
+    <label for="sku">SKU</label>
+    <input id="sku" formControlName="sku" [class.input--invalid]="form.controls.sku.invalid && form.controls.sku.touched" />
+    @if (form.controls.sku.touched && form.controls.sku.hasError('required')) {
+      <span class="field-error">SKU is required.</span>
+    }
+  </div>
+
+  <div class="form-row">
+    <div class="form-group">
+      <label for="price">Price ($)</label>
+      <input id="price" type="number" min="0.01" step="0.01" formControlName="price" [class.input--invalid]="form.controls.price.invalid && form.controls.price.touched" />
+      @if (form.controls.price.touched && form.controls.price.hasError('min')) {
+        <span class="field-error">Price must be greater than zero.</span>
+      }
+    </div>
+    <div class="form-group">
+      <label for="stock">Stock</label>
+      <input id="stock" type="number" min="0" formControlName="stockQuantity" />
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label for="category">Category</label>
+    <select id="category" formControlName="category">
+      @for (cat of categories; track cat) {
+        <option [value]="cat">{{ cat }}</option>
+      }
+    </select>
+  </div>
+
+  <div class="form-actions">
+    <button type="button" class="btn btn--secondary" (click)="cancelled.emit()">Cancel</button>
+    <button type="submit" class="btn btn--primary" [disabled]="form.invalid">
+      {{ product ? 'Update' : 'Create' }}
+    </button>
+  </div>
+</form>
